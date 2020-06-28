@@ -20,7 +20,7 @@ workflows:
   commit-workflow:
     jobs:
       - build
-  schedule-workflow:
+  scheduled-workflow:
     trggers:
       - schedule:
           cron: "*/15 * * * *"
