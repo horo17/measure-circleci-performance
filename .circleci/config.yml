@@ -6,11 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Download Golang binary
+        name: Download Go
         command: |
           time curl -sSLO --retry 3 https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
       - run:
-        name: Download Golang binary
+        name: Download Chromium
         command: |
           REVISION=$(curl -sSL --retry 5 "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2FLAST_CHANGE?alt=media") \
           && time curl -sSL --retry 5 "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F${REVISION}%2Fchrome-linux.zip?alt=media -o chrome-linux.zip"
