@@ -21,7 +21,7 @@ workflows:
     jobs:
       - build
   scheduled-workflow:
-    trggers:
+    triggers:
       - schedule:
           cron: "*/15 * * * *"
           filters:
