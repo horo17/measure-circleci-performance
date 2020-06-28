@@ -8,11 +8,11 @@ jobs:
       - run:
           name: Download Go
           command: |
-            time curl -sSLO https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
+            time curl -sfSLO https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
       - run:
           name: Download Chromium
           command: |
-            time curl -sSL "https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots" -o chrome-linux.zip
+            time curl -sfSL "https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots" -o chrome-linux.zip
 
 workflows:
   version: 2
